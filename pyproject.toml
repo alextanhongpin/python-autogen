@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "python-autogen"
+version = "0.1.0"
+description = ""
+authors = ["alextanhongpin <alextan220990@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+google-generativeai = "^0.2.2"
+load-dotenv = "^0.1.0"
+pyautogen = "^0.1.14"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
