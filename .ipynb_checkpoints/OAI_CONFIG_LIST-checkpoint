@@ -1,0 +1,8 @@
+[
+    {
+        "model": "palm/chat-bison",
+        "api_base": "http://0.0.0.0:8000",
+        "api_type": "open_ai",
+        "api_key": "sk-fake"
+    }
+]

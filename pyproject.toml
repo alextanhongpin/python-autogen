@@ -6,11 +6,13 @@ authors = ["alextanhongpin <alextan220990@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.12"
 google-generativeai = "^0.2.2"
 load-dotenv = "^0.1.0"
 pyautogen = "^0.1.14"
 jupyterlab = "^4.0.9"
+black = {extras = ["jupyter"], version = "^23.11.0"}
+pymemgpt = "^0.2.4"
 
 
 [build-system]
