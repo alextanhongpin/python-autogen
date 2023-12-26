@@ -1,8 +1,7 @@
 [
     {
-        "model": "palm/chat-bison",
-        "api_base": "http://0.0.0.0:8000",
-        "api_type": "open_ai",
+        "model": "models/gemini-pro",
+        "base_url": "http://0.0.0.0:8080",
         "api_key": "sk-fake"
     }
 ]
