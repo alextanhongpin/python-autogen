@@ -6,3 +6,6 @@ run:
 
 jupyter:
 	jupyter-lab
+
+autogenstudio:
+	@poetry run autogenstudio ui --port 8081

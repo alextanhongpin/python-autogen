@@ -239,6 +239,21 @@ doc = ["doc8", "sphinx (>=7.0.0)", "sphinx-autobuild", "sphinx-autodoc-typehints
 test = ["dateparser (==1.*)", "pre-commit", "pytest", "pytest-cov", "pytest-mock", "pytz (==2021.1)", "simplejson (==3.*)"]
 
 [[package]]
+name = "arxiv"
+version = "2.1.0"
+description = "Python wrapper for the arXiv API: https://arxiv.org/help/api/"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "arxiv-2.1.0-py3-none-any.whl", hash = "sha256:d634a0a59c9f05baf524eaa65563bb0a4532d2b4727a1162a1a9ba7e1e6e48cc"},
+    {file = "arxiv-2.1.0.tar.gz", hash = "sha256:eb4b1d5ab9dfd66027c344bb324c20be21d56fe15f6ce216ed5b209df747dea8"},
+]
+
+[package.dependencies]
+feedparser = "6.0.10"
+requests = "2.31.0"
+
+[[package]]
 name = "asgiref"
 version = "3.7.2"
 description = "ASGI specs, helper code, and adapters"
@@ -298,6 +313,28 @@ dev = ["attrs[docs,tests]", "pre-commit"]
 docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier", "zope-interface"]
 tests = ["attrs[tests-no-zope]", "zope-interface"]
 tests-no-zope = ["cloudpickle", "hypothesis", "mypy (>=1.1.1)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "pytest-xdist[psutil]"]
+
+[[package]]
+name = "autogenstudio"
+version = "0.0.18a0"
+description = "AutoGen Studio"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "autogenstudio-0.0.18a0-py3-none-any.whl", hash = "sha256:848f119510d30f3443cc570de61dfbcbd2a78e11a66224184231c5a5bbc01f63"},
+    {file = "autogenstudio-0.0.18a0.tar.gz", hash = "sha256:822777444dec92b865daf0a3e11235b9e8418d6c9cbd4dde1ac9b678fcbc2a35"},
+]
+
+[package.dependencies]
+arxiv = "*"
+fastapi = "*"
+pyautogen = "0.2.0"
+pydantic = "*"
+typer = "*"
+uvicorn = "*"
+
+[package.extras]
+web = ["fastapi", "uvicorn"]
 
 [[package]]
 name = "babel"
@@ -1059,6 +1096,20 @@ files = [
 
 [package.extras]
 devel = ["colorama", "json-spec", "jsonschema", "pylint", "pytest", "pytest-benchmark", "pytest-cache", "validictory"]
+
+[[package]]
+name = "feedparser"
+version = "6.0.10"
+description = "Universal feed parser, handles RSS 0.9x, RSS 1.0, RSS 2.0, CDF, Atom 0.3, and Atom 1.0 feeds"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "feedparser-6.0.10-py3-none-any.whl", hash = "sha256:79c257d526d13b944e965f6095700587f27388e50ea16fd245babe4dfae7024f"},
+    {file = "feedparser-6.0.10.tar.gz", hash = "sha256:27da485f4637ce7163cdeab13a80312b93b7d0c1b775bef4a47629a3110bca51"},
+]
+
+[package.dependencies]
+sgmllib3k = "*"
 
 [[package]]
 name = "filelock"
@@ -3928,20 +3979,20 @@ pyasn1 = ">=0.4.6,<0.6.0"
 
 [[package]]
 name = "pyautogen"
-version = "0.2.2"
+version = "0.2.0"
 description = "Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework"
 optional = false
 python-versions = ">=3.8, <3.12"
 files = [
-    {file = "pyautogen-0.2.2-py3-none-any.whl", hash = "sha256:c47b386c77ef7cc2e5e7e37ef9f93f543ccf055a0f3da2c509285422914f1de6"},
-    {file = "pyautogen-0.2.2.tar.gz", hash = "sha256:ef44ed706280f14b7ee256641d2407a12627a56f0b4fc0a3f6095be5ff11ad4b"},
+    {file = "pyautogen-0.2.0-py3-none-any.whl", hash = "sha256:d7bf4d239f85152e191026d8173f649e256c431cf31b93ca3629cd2f0c525a46"},
+    {file = "pyautogen-0.2.0.tar.gz", hash = "sha256:858f2d15eaa68f043f7b67b975a6d27f738c98ca4d7e0e96b400061c0ac3e692"},
 ]
 
 [package.dependencies]
 chromadb = {version = "*", optional = true, markers = "extra == \"teachable\""}
 diskcache = "*"
 flaml = "*"
-openai = ">=1.3,<2.0"
+openai = ">=1.2,<2.0"
 python-dotenv = "*"
 termcolor = "*"
 tiktoken = "*"
@@ -4923,6 +4974,16 @@ files = [
 docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-hoverxref (<2)", "sphinx-inline-tabs", "sphinx-lint", "sphinx-notfound-page (>=1,<2)", "sphinx-reredirects", "sphinxcontrib-towncrier"]
 testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8-2020", "ini2toml[lite] (>=0.9)", "jaraco.develop (>=7.21)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pip (>=19.1)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-ruff", "pytest-timeout", "pytest-xdist", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
 testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "packaging (>=23.1)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
+
+[[package]]
+name = "sgmllib3k"
+version = "1.0.0"
+description = "Py3k port of sgmllib."
+optional = false
+python-versions = "*"
+files = [
+    {file = "sgmllib3k-1.0.0.tar.gz", hash = "sha256:7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9"},
+]
 
 [[package]]
 name = "shellingham"
@@ -6021,4 +6082,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<3.12"
-content-hash = "65609bdde77ccbbd1eab7f97a6b96e185a327a6edbd26cd0b5702549e42db648"
+content-hash = "d6f4ea1592da1168a3c721d5f6aded34dd22807e1e0798c8083154849fb29f81"
