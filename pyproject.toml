@@ -13,6 +13,9 @@ pyautogen = {extras = ["teachable"], version = "^0.2.2"}
 jupyterlab = "^4.0.9"
 black = {extras = ["jupyter"], version = "^23.11.0"}
 pymemgpt = "^0.2.4"
+matplotlib = "^3.8.2"
+yfinance = "^0.2.33"
+docker = "^7.0.0"
 
 
 [build-system]
